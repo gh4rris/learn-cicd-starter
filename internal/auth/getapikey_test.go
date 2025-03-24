@@ -15,7 +15,7 @@ func TestGetApiKey(t *testing.T) {
 		expErr   string
 	}{
 		{
-			expErr: "o authorization header included",
+			expErr: "no authorization header included",
 		},
 		{
 			key:    "Authorization",
@@ -29,7 +29,7 @@ func TestGetApiKey(t *testing.T) {
 		},
 		{
 			key:      "Authorization",
-			value:    "ApiKey 12245",
+			value:    "ApiKey 12345",
 			expected: "12345",
 		},
 	}
